@@ -12,7 +12,7 @@ This plugin is a recreation of the .chat command provided by the SwiftKraft Plug
 
 - **Setting Name:** TimeToDisplay
 - **Description:** This setting determines the duration in seconds for which the "Tutorial Message" broadcast stays on the screen, along with any chat messages sent with the command.
-- **Default Value:** true
+- **Default Value:** 5
 
 ## Send Broadcast
 
