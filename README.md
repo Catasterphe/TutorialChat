@@ -1,4 +1,4 @@
-# 3114 Spawn Customizer (originally Always3114)
+#  Tutorial Chat - Recreation
 
 This plugin is a recreation of the .chat command provided by the SwiftKraft Plugin for SCP:SL - used for talking with Tutorials / Allows anyone with Remote Admin to see said messages. Below are the available settings and their descriptions:
 
