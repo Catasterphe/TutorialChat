@@ -1,15 +1,7 @@
 ﻿using PluginAPI.Core;
-using System.Collections.Generic;
 using System;
-using TutorialChat;
 using CommandSystem;
 using PlayerRoles;
-using RemoteAdmin;
-using UnityEngine;
-using PluginAPI.Commands;
-using PluginAPI;
-using System.Linq;
-using System.Net;
 
 namespace TutorialChat.Commands
 {
@@ -24,12 +16,20 @@ namespace TutorialChat.Commands
 
         static string sanitizeTags(string input)
         {
-            int startIndex = input.IndexOf("<");
-            int endIndex = input.IndexOf(">");
+            int startIndex = input.IndexOf('<');
 
-            if (startIndex < endIndex)
+            while (startIndex != -1)
             {
-                return input.Substring(0, startIndex) + input.Substring(endIndex + 1);
+                int endIndex = input.IndexOf('>', startIndex + 1);
+                if (endIndex != -1)
+                {
+                    input = input.Substring(0, startIndex) + input.Substring(endIndex + 1);
+                }
+                else
+                {
+                    break;
+                }
+                startIndex = input.IndexOf('<');
             }
 
             return input;
@@ -62,7 +62,6 @@ namespace TutorialChat.Commands
                     }
 
                     player.SendConsoleMessage($"<color=green>[Chat Message]</color> <color=white>{sanitizedMessage}</color> - <color=green>{senderAsPlayer.DisplayNickname}</color>");
-                    response = $"Chat message \"{string.Join(" ", arguments)}\" sent.";
                 }
             }
 
