@@ -1,6 +1,10 @@
-#  Tutorial Chat - Recreation
+#  Tutorial Chat
 
 This plugin is a recreation of the .chat command provided by the SwiftKraft Plugin for SCP:SL - used for talking with Tutorials / Allows anyone with Remote Admin to see said messages.
+
+## Basic Usage
+
+When a player is set to the `Tutorial` Role, they will get a broadcast telling them to use the .chat command in the client console (Press ~) to send a message to the other tutorials (usually admins). Admins do not have to be tutorials to use the command. You can mute players by typing `cmute [id/name]` in the Remote Admin (Press M) console.
 
 ## Default Config
 
