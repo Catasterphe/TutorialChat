@@ -60,9 +60,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\ChatMute.cs" />
     <Compile Include="Commands\Chat.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="EventHandler.cs" />
+    <Compile Include="PlayerManager.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

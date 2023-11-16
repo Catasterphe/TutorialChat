@@ -2,7 +2,6 @@
 using System;
 using CommandSystem;
 using PlayerRoles;
-using VoiceChat;
 
 namespace TutorialChat.Commands
 {
@@ -40,7 +39,7 @@ namespace TutorialChat.Commands
         {
             Player senderAsPlayer = Player.Get(sender);
 
-            if (senderAsPlayer == null || (Plugin.Singleton.Config.CheckMute && VoiceChatMutes.IsMuted(senderAsPlayer.ReferenceHub)))
+            if (senderAsPlayer == null || PlayerManager.IsPlayerMuted(senderAsPlayer.ReferenceHub.PlayerId))
             {
                 response = "You do not have permissions to use this command.";
                 return false;
